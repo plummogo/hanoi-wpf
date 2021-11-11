@@ -1,0 +1,62 @@
+<Window x:Class="beadando.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Hanoi" Height="600" Width="1020">
+    <StackPanel Width="1000" Height="1000">
+        <Grid>
+        <Grid.Resources>
+            <RadialGradientBrush x:Key="radColor" GradientOrigin="0.4,0.6">
+                <GradientStop Color="Plum" Offset="0.5"/>
+                <GradientStop Color="DodgerBlue" Offset="0.4"/>
+            </RadialGradientBrush>
+        </Grid.Resources>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="428*" />
+            <ColumnDefinition Width="75*" />
+        </Grid.ColumnDefinitions>
+            <Canvas Height="600" HorizontalAlignment="Left" 
+                    Name="canvas1" VerticalAlignment="Top" 
+                    Width="1000" Background="Black" 
+                    Opacity="1" Grid.ColumnSpan="2"/>
+            <Button Content="Start" Name="button1" FontSize="18"  
+                Click="button1_Click"  
+                Margin="0,-450,-670,100" Width="75" Height="25"
+                Background="{StaticResource radColor}"
+                Foreground="Firebrick">
+            <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <Label x:Name="korongLepesek" 
+                   FontSize="13" Width="75"
+                   Height="25"
+                   Background="{StaticResource radColor}"
+                   Margin="10,-70,-660,100"/>
+            <Label Content="5" x:Name="lab3" 
+                   FontSize="13" Width="75" 
+                   Height="25" 
+                   Background="{StaticResource radColor}"
+                   Margin="10,-370,-660,100"/>
+            <RadioButton x:Name="radBtn1" HorizontalAlignment="Right" Margin="100,60,10,100" Checked="radBtn1_Checked_1"/>
+            <Label Content="7" x:Name="lab5" 
+                   FontSize="13" Width="75" 
+                   Height="25" 
+                   Background="{StaticResource radColor}"
+                   Margin="10,-310,-660,100"/>
+            <RadioButton x:Name="radBtn2" HorizontalAlignment="Right" Margin="100,90,10,100" Checked="radBtn2_Checked"/>
+            <Label Content="12" x:Name="lab12" 
+                   FontSize="13" Width="75" 
+                   Height="25" 
+                   Background="{StaticResource radColor}"
+                   Margin="10,-250,-660,100"/>
+            <RadioButton x:Name="radBtn3" HorizontalAlignment="Right" Margin="100,120,10,100" Checked="radBtn3_Checked" />
+            <Button Content="Sebesseg" x:Name="korongSzamaLab"
+                   FontSize="13" Width="75" 
+                   Height="25" 
+                   Background="{StaticResource radColor}"
+                   Margin="10,-150,-660,100" Click="korongSzamaLab_Click"/>
+                <TextBox x:Name="textB" HorizontalAlignment="Right" Margin="90,-150,10,100"
+                     Width="25" Height="25"/>
+        </Grid>
+    </StackPanel>
+</Window>
